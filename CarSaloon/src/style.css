@@ -1,68 +1,99 @@
-/* UI Controls Section */
-#uiControls {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%); /* Centers the controls horizontally */
-  z-index: 10;  /* Ensure it stays on top of the canvas */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  pointer-events: auto; /* Ensures the UI elements are interactive */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1e1e1e, #3c3c3c);
+    color: white;
 }
 
-/* Car Details Section */
 #carDetails {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #ffffff55;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* Controls Container */
-#controlsContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+#controls {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-/* Control Group Styling */
-.controlGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+#controls select, 
+#controls button, 
+#controls input {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
 }
 
-.controlGroup label {
-  color: white;
-  font-size: 14px;
+#controls select {
+    background-color: #ffffff55;
+    color: white;
 }
 
-.controlGroup input, .controlGroup select, .controlGroup button {
-  padding: 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: none;
+#controls button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
 }
 
-#colorPicker {
-  width: 100%;
+#controls button:hover {
+    background-color: #0056b3;
 }
 
-#windowOpacitySlider {
-  width: 100%;
+#controls input[type="color"] {
+    cursor: pointer;
 }
 
-button {
-  cursor: pointer;
-  background-color: #ff6200;
-  color: white;
-  border: none;
-  transition: background-color 0.3s;
+#controls input[type="range"] {
+    appearance: none;
+    width: 150px;
+    background: transparent;
 }
 
-button:hover {
-  background-color: #e55d00;
+#controls input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #007bff;
+    border-radius: 3px;
+}
+
+#controls input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#carDetails h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+#carDetails p {
+    margin: 5px 0;
+    font-size: 14px;
 }
