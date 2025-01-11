@@ -65,13 +65,11 @@ function init() {
         clipBias: 0.003,
         textureWidth: 512,
         textureHeight: 512,
-        color: 0x333333
+        color: 0xfffff0
     });
     groundMirror.rotation.x = -Math.PI / 2;
     groundMirror.position.y = -1.9;
     scene.add(groundMirror);
-
-    const ground = new THREE.PlaneGeometry(2000,1000)
 
     // Orbit controls
     controls = new OrbitControls(camera, renderer.domElement);
