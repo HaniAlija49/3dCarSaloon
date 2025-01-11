@@ -84,7 +84,7 @@ function init() {
     0.1,
     1000
   );
-  camera.position.set(0, 2, 13);
+  camera.position.set(-9, 2, -8);
 
   // Renderer setup
   renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -125,11 +125,22 @@ function init() {
         color: 0xfffff0
     });
     groundMirror.rotation.x = -Math.PI / 2;
-    groundMirror.position.y = -1.9;
+    groundMirror.position.y = -2;
     scene.add(groundMirror);
 
+    const groundFloor = new Reflector(new THREE.CircleGeometry(15, 64), {
+        clipBias: 0.003,
+        textureWidth: 512,
+        textureHeight: 512,
+        color: 0x00000
+    });
+    groundFloor.rotation.x = -Math.PI / 2;
+    groundFloor.position.y = -1.9;
+    scene.add(groundFloor);
   // Orbit controls
+  debugger
   controls = new OrbitControls(camera, renderer.domElement);
+  console.log(camera)
   controls.enableDamping = true;
   controls.dampingFactor = 0.1;
   controls.maxPolarAngle = Math.PI / 2;
