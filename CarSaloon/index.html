@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Car Salon</title>
-    <link rel="stylesheet" href="/src/style.css">
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Car Salon</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- Car Details Section -->
-    <div id="carDetails">
-        <h3>Car Details</h3>
-        <p id="carInfo"></p>
-    </div>
+  <!-- Car Details Section -->
+  <div id="carDetails">
+    <h3>Car Details</h3>
+    <p id="carInfo"></p>
+  </div>
 
-    <!-- UI Controls Section -->
-    <div id="controls">
-        <div id="modelSelector">
-            <select id="carModelSelect">
-            </select>
-            <button id="loadCarBtn">Load Car</button>
-        </div>
+  <!-- UI Controls Section -->
+  <div id="controls">
+    <select id="carModelSelect"></select>
+    <button id="loadCarBtn">Load Car</button>
+    <input type="color" id="colorPicker" value="#ff0000">
+    <input type="range" id="windowOpacitySlider" min="0" max="1" step="0.01" value="0.5">
+    <!-- New Background Toggle Button -->
+    <button id="toggleBackgroundBtn" title="Toggle Background">
+      <i class="fas fa-moon"></i>
+    </button>
+    <!-- Other buttons -->
+    <button id="toggleRotationBtn" title="Toggle Rotation">
+      <i class="fas fa-pause"></i>
+    </button>
+    <button id="resetCameraBtn" title="Reset Camera">
+      <i class="fas fa-undo"></i>
+    </button>
+  </div>
 
-        <input type="color" id="colorPicker" value="#ff0000">
-        <input type="range" id="windowOpacitySlider" min="0" max="1" step="0.01" value="0.5">
-    </div>
-
-    <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
