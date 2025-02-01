@@ -72,6 +72,8 @@ export function initScene() {
   controls.enableDamping = true;
   controls.dampingFactor = 0.1;
   controls.maxPolarAngle = Math.PI / 2;
+
+  controls.maxDistance = 13; // 🔹 Maximum zoom-out distance
 }
 
 export function render() {
