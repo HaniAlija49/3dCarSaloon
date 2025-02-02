@@ -20,7 +20,6 @@ export function loadCarModel(car) {
   document.body.appendChild(loaderSpinner);
 
   const loader = new GLTFLoader();
-  debugger
   loader.load(
     `/assets/${car.glb}`,
     (gltf) => {
