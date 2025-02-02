@@ -92,7 +92,7 @@ export function loadBackground(path) {
     },
     undefined,
     (error) => {
-      console.error("Error loading background:", error);
+      console.error(`Error loading HDR file: ${path}`, error);
     }
   );
 }

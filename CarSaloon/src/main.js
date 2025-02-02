@@ -5,8 +5,8 @@ import { populateCarDropdown, setupUIEventListeners } from "./ui.js";
 import { carsData } from "./data.js";
 
 // Define your two background paths (adjust the paths as needed)
-const dayBackground = "/src/assets/background.hdr";
-const nightBackground = "/src/assets/moonless_golf_1k.hdr";
+const dayBackground = "/assets/background.hdr";
+const nightBackground = "/assets/moonless_golf_1k.hdr";
 
 let rotationEnabled = true;
 let isDay = true;
